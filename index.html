@@ -6,7 +6,7 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <meta name="title" content="IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
   <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -245,28 +245,36 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="#" target="_blank">Author A</a><sup>1*</sup>,</span>
+                <a href="#" target="_blank">Yanmei Jiao</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="#" target="_blank">Author B</a><sup>1*</sup>,</span>
+                  <a href="#" target="_blank">Anpeng Lu</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="#" target="_blank">Author C</a><sup>2</sup>,</span>
+                    <a href="#" target="_blank">Wenhan Hu</a><sup>1</sup>,</span>
                   <span class="author-block">
-                    <a href="#" target="_blank">Author D</a><sup>1</sup>
+                    <a href="#" target="_blank">Rong Xiong</a><sup>2</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Yue Wang</a><sup>2</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Huajin Tang</a><sup>3</sup>,
+                  </span>
+                  <span class="author-block">
+                    <a href="#" target="_blank">Wen-an Zhang</a><sup>4</sup>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block"><sup>1</sup>University / Lab Name &nbsp; <sup>2</sup>Institute Name<br>Conference 2026</span>
+                    <span class="author-block"><sup>1</sup>Hangzhou Normal University, <sup>2</sup>Zhejiang University</span>,<sup>3</sup> Zhejiang University, <sup>4</sup> Zhejiang University of Technology
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2603.25382v1.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -275,20 +283,9 @@
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="#" role="button" onclick="openComingSoonModal(event)"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -299,7 +296,7 @@
 
                 <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2603.25382v1" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -308,6 +305,14 @@
                 </a>
               </span>
             </div>
+
+            <!-- Conference Information -->
+            <div style="margin-top: 1.5rem;">
+              <!-- <h2 style="color: #ff2600ad; margin-bottom: 0.5rem; font-weight: 600;">
+                To be presented at <a href="https://www.corl.org/home" target="_blank" style="color: #ff2600ad;">CoRL 2025, Seoul, Korea.</a><br>
+              </h2> -->
+            </div>
+
           </div>
         </div>
       </div>
@@ -340,10 +345,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
+        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Object-goal visual navigation requires robots to reason over semantic structure and act effectively under partial observability. Recent approaches based on object-level topological maps enable long-horizon navigation without dense geometric reconstruction, but their execution remains limited by the gap between <strong>global topological guidance and local perception-driven control</strong>. In particular, local decisions are made solely from the current egocentric observation, without access to information beyond the robot's field of view. As a result, the robot may persist along its current heading even when initially oriented away from the goal, moving toward directions that do not decrease the global topological distance.
+          </p>
+          <p>
+            In this work, we propose <strong><span style="color: var(--primary-color);">IntentReact</span></strong>, an <strong>intent-conditioned object-centric navigation framework</strong> that introduces a compact interface between global topological planning and reactive object-centric control. Our approach encodes global topological guidance as a low-dimensional directional signal, termed <strong><em>intent</em></strong>, which conditions a learned waypoint prediction policy to bias navigation toward topologically consistent progression.
+          </p>
+          <p>
+            This design enables the robot to promptly reorient when local observations are misleading, guiding motion toward directions that decrease global topological distance while preserving the reactivity and robustness of object-centric control. We evaluate the proposed framework through extensive experiments, demonstrating improved navigation success and execution quality compared to prior object-centric navigation methods.
           </p>
         </div>
       </div>
@@ -351,6 +361,26 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Pipeline Overview -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">IntentReact Pipeline</h2>
+        <img src="img/IntentReact Navigation pipeline.png" alt="IntentReact Navigation Pipeline" class="center-image" style="width:100%; border-radius: 12px;" />
+        <div class="content has-text-justified" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;"> 
+          <p>
+            <span style="font-weight: 700; color: var(--text-primary);">a) Mapping:</span> We construct an object-level topological map with 3D node information.<br><br>
+            <span style="font-weight: 700; color: var(--text-primary);">b) Execution:</span> During online execution, the current observation is matched to the map to obtain a set of query nodes. For each query node, global planning is performed to obtain a shortest path, from which an object-level costmap is built and an <span style="font-weight: 600;">intent vector</span> indicating the direction of decreasing topological distance is computed and fed into the local control stage.<br><br>
+            <span style="font-weight: 700; color: var(--text-primary);">c) Control & Refinement:</span> The intent is incorporated as a conditional signal to modulate the controller’s feature representation, enabling global guidance rather than hard intervention. A <span style="font-weight: 600;">BEV costmap</span> is further used to correct the feasibility of the predicted waypoint, forming a unified closed loop between learned control and geometric feasibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Pipeline Overview -->
 
 
 <!-- Image carousel -->
@@ -482,16 +512,32 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@misc{jiao2026intentreact,
+  title={IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent},
+  author={Yanmei Jiao and Anpeng Lu and Wenhan Hu and Rong Xiong and Yue Wang and Huajin Tang and Wen-an Zhang},
+  year={2026},
+  eprint={2603.25382v1},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
 }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
+
+  <div class="coming-soon-modal" id="comingSoonModal" aria-hidden="true">
+    <div class="coming-soon-modal__backdrop" onclick="closeComingSoonModal()"></div>
+    <div class="coming-soon-modal__panel" role="dialog" aria-modal="true" aria-labelledby="comingSoonTitle">
+      <button class="coming-soon-modal__close" type="button" aria-label="Close modal" onclick="closeComingSoonModal()">&times;</button>
+      <div class="coming-soon-modal__badge">Code</div>
+      <h3 id="comingSoonTitle">Coming Soon</h3>
+      <p>comming soon</p>
+      <div class="coming-soon-modal__sparkles" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
 
 
   <footer class="footer">

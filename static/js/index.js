@@ -1,5 +1,27 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
+function openComingSoonModal(event) {
+    if (event) {
+        event.preventDefault();
+    }
+
+    const modal = document.getElementById('comingSoonModal');
+    if (!modal) return;
+
+    modal.classList.add('is-active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+}
+
+function closeComingSoonModal() {
+    const modal = document.getElementById('comingSoonModal');
+    if (!modal) return;
+
+    modal.classList.remove('is-active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+}
+
 // More Works Dropdown Functionality
 function toggleMoreWorks() {
     const dropdown = document.getElementById('moreWorksDropdown');
@@ -29,6 +51,7 @@ document.addEventListener('click', function(event) {
 // Close dropdown on escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
+        closeComingSoonModal();
         const dropdown = document.getElementById('moreWorksDropdown');
         const button = document.querySelector('.more-works-btn');
         dropdown.classList.remove('show');
