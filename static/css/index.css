@@ -492,6 +492,95 @@ body.modal-open {
   margin-bottom: 1.5rem;
 }
 
+/* Hall Environment Grid Styling */
+.hall-environment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.hall-environment-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.hall-environment-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hall-environment-caption {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.cross-embodiment-section .hero-body,
+.cross-embodiment-section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.6rem;
+}
+
+.cross-embodiment-section .deployment-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+}
+
+.cross-embodiment-section .deployment-card {
+  flex: 0 0 220px;
+  max-width: 220px;
+  width: 220px;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 0.45rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.cross-embodiment-section .deployment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cross-embodiment-section .deployment-card img,
+.cross-embodiment-section .deployment-card video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.cross-embodiment-section .deployment-card img {
+  height: 120px;
+  object-fit: cover;
+}
+
+.cross-embodiment-section .deployment-card video {
+  margin-top: 0.35rem;
+  height: 88px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .cross-embodiment-section .deployment-grid {
+    justify-content: flex-start;
+  }
+}
+
 /* Footer Improvements */
 .footer {
   background: var(--background-secondary);
@@ -753,6 +842,25 @@ code {
 @media screen and (max-width: 768px) {
   .hero-body {
     padding: 2rem 1rem;
+  }
+
+  .cross-embodiment-section .deployment-grid {
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+
+  .cross-embodiment-section .deployment-card {
+    flex: 0 0 200px;
+    max-width: 200px;
+    width: 200px;
+  }
+
+  .cross-embodiment-section .deployment-card img {
+    height: 108px;
+  }
+
+  .cross-embodiment-section .deployment-card video {
+    height: 80px;
   }
   
   .publication-header .hero-body {
