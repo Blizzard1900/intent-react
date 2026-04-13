@@ -58,6 +58,13 @@ iframe {
 .hero .container {
   position: relative;
   padding: 4rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__content {
+  text-align: center;
 }
 
 .eyebrow {
@@ -70,17 +77,19 @@ iframe {
 }
 
 .title {
-  margin: 0.6rem 0 1rem;
+  margin: 0.6rem auto 1rem;
   font-family: "Source Serif 4", serif;
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.15;
-  max-width: 18ch;
+  max-width: 24ch;
+  text-wrap: balance;
 }
 
 .authors,
 .affiliations {
   margin: 0.35rem 0;
   color: var(--muted);
+  text-align: center;
 }
 
 .cta-row {
@@ -88,6 +97,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+  justify-content: center;
 }
 
 .btn {
