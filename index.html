@@ -77,8 +77,8 @@
   <title>IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/png" href="img/compass.png">
+  <link rel="apple-touch-icon" href="img/compass.png">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -186,56 +186,9 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
+  <!-- Temporarily hidden: More Works dropdown module -->
 
-  <main id="main-content" style="display: none;">
-  <!--
+  <main id="main-content">
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -243,69 +196,7 @@
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
             <h1 class="title is-1 publication-title">IntentReact : Guiding Reactive Object-Centric Navigation via Topological Intent</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
-              <span class="author-block">
-                <a href="#" target="_blank">Yanmei Jiao</a><sup>1</sup>,</span>
-                <span class="author-block">
-                  <a href="#" target="_blank">Anpeng Lu</a><sup>1</sup>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Wenhan Hu</a><sup>1</sup>,</span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Rong Xiong</a><sup>2</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Yue Wang</a><sup>2</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Huajin Tang</a><sup>3</sup>,
-                  </span>
-                  <span class="author-block">
-                    <a href="#" target="_blank">Wen-an Zhang</a><sup>4</sup>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block"><sup>1</sup>Hangzhou Normal University, <sup>2</sup>Zhejiang University</span>,<sup>3</sup> Zhejiang University, <sup>4</sup> Zhejiang University of Technology
-                    <!-- TODO: Remove this line if no equal contribution -->
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2603.25382v1.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="#" role="button" onclick="openComingSoonModal(event)"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2603.25382v1" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
+            <!-- Temporarily hidden: authors / affiliations / publication links -->
 
             <!-- Conference Information -->
             <div style="margin-top: 1.5rem;">
@@ -324,21 +215,51 @@
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen start-info-showcase">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <div class="start-info-legend-wrap">
+        <img src="img/Hall_environment/start_info/legend.png" alt="Mapping and navigation legend" loading="lazy" />
+      </div>
+
+      <div class="start-info-pair-grid">
+        <article class="start-info-pair-card">
+          <img src="img/Hall_environment/start_info/image1.png" alt="Trajectory case 1" loading="lazy" />
+          <video controls muted loop preload="metadata" playsinline poster="img/Hall_environment/start_info/image1.png" src="img/Hall_environment/start_info/video1-h264.mp4"></video>
+        </article>
+        <article class="start-info-pair-card">
+          <img src="img/Hall_environment/start_info/image2.png" alt="Trajectory case 2" loading="lazy" />
+          <video controls muted loop preload="metadata" playsinline poster="img/Hall_environment/start_info/image2.png" src="img/Hall_environment/start_info/video2-h264.mp4"></video>
+        </article>
+        <article class="start-info-pair-card">
+          <img src="img/Hall_environment/start_info/image3.png" alt="Trajectory case 3" loading="lazy" />
+          <video controls muted loop preload="metadata" playsinline poster="img/Hall_environment/start_info/image3.png" src="img/Hall_environment/start_info/video3-h264.mp4"></video>
+        </article>
+      </div>
+
+      <h2 class="subtitle has-text-centered start-info-caption">
+        <strong>IntentReact</strong> leverages intent signal to correct early deviations and maintain topological consistency, yielding trajectories more efficient than the mapping path.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
+<section class="section hero is-light overview-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <h2 class="title is-3">Overview</h2>
+        <div class="overview-highlights">
+          <ul class="overview-bullet-list">
+            <li>We propose an <em>intent-conditioned object-centric navigation</em> framework that introduces a global topological intent into a reactive controller, enabling an effective bridge between global planning and local decision-making under partial observability.</li>
+            <li>We introduce a compact <em>next-hop intent representation</em> that captures minimal global guidance to resolve local ambiguity while maintaining consistency with topological progress.</li>
+            <li>We present a <em>feasibility-aware waypoint refinement</em> module that enforces geometric consistency via BEV-based traversability, forming a unified loop between learned control and explicit feasibility reasoning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -371,11 +292,13 @@
         <h2 class="title is-3">IntentReact Pipeline</h2>
         <img src="img/IntentReact Navigation pipeline.png" alt="IntentReact Navigation Pipeline" class="center-image" style="width:100%; border-radius: 12px;" />
         <div class="content has-text-justified" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;"> 
-          <p>
-            <span style="font-weight: 700; color: var(--text-primary);">a) Mapping:</span> We construct an object-level topological map with 3D node information.<br><br>
-            <span style="font-weight: 700; color: var(--text-primary);">b) Execution:</span> During online execution, the current observation is matched to the map to obtain a set of query nodes. For each query node, global planning is performed to obtain a shortest path, from which an object-level costmap is built and an <span style="font-weight: 600;">intent vector</span> indicating the direction of decreasing topological distance is computed and fed into the local control stage.<br><br>
-            <span style="font-weight: 700; color: var(--text-primary);">c) Control & Refinement:</span> The intent is incorporated as a conditional signal to modulate the controller’s feature representation, enabling global guidance rather than hard intervention. A <span style="font-weight: 600;">BEV costmap</span> is further used to correct the feasibility of the predicted waypoint, forming a unified closed loop between learned control and geometric feasibility.
-          </p>
+          <ul class="pipeline-list">
+            <li><strong>1) Offline Mapping:</strong> We construct an object-level topological map with 3D node information.</li>
+            <li><strong>2) Online association:</strong> During online execution, the current observation is matched to the map to obtain a set of query nodes.</li>
+            <li><strong>3) Global topological planning:</strong> For each query node, global planning is performed to obtain a shortest path, from which an object-level costmap is built and an <span style="font-weight: 600;">intent vector</span> indicating the direction of decreasing topological distance is computed and fed into the local control stage.</li>
+            <li><strong>4) Intent-conditioned local control:</strong> The local controller predicts waypoints from an object-centric costmap, with intent acting as a conditional signal to modulate feature representations and provide global guidance.</li>
+            <li><strong>5) Waypoint refinement:</strong> A <span style="font-weight: 600;">BEV costmap</span> is further used to correct the feasibility of the predicted waypoint, forming a unified closed loop between learned control and geometric feasibility.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -392,30 +315,18 @@
         <div class="deployment-grid">
           <article class="deployment-card">
             <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 1" loading="lazy">
-            <video controls muted loop preload="metadata">
-              <source src="static/videos/cross_embodiment_1.mp4" type="video/mp4">
-            </video>
           </article>
 
           <article class="deployment-card">
             <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 2" loading="lazy">
-            <video controls muted loop preload="metadata">
-              <source src="static/videos/cross_embodiment_2.mp4" type="video/mp4">
-            </video>
           </article>
 
           <article class="deployment-card">
             <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 3" loading="lazy">
-            <video controls muted loop preload="metadata">
-              <source src="static/videos/cross_embodiment_3.mp4" type="video/mp4">
-            </video>
           </article>
 
           <article class="deployment-card">
             <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 4" loading="lazy">
-            <video controls muted loop preload="metadata">
-              <source src="static/videos/cross_embodiment_4.mp4" type="video/mp4">
-            </video>
           </article>
         </div>
       </div>
@@ -545,45 +456,6 @@
 
 
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@misc{jiao2026intentreact,
-  title={IntentReact: Guiding Reactive Object-Centric Navigation via Topological Intent},
-  author={Yanmei Jiao and Anpeng Lu and Wenhan Hu and Rong Xiong and Yue Wang and Huajin Tang and Wen-an Zhang},
-  year={2026},
-  eprint={2603.25382v1},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-  -->
   </main>
 
   <div class="coming-soon-modal" id="comingSoonModal" aria-hidden="true">
