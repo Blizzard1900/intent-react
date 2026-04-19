@@ -639,6 +639,153 @@ body.modal-open {
   transition: var(--transition);
 }
 
+.comparison-showcase .hero-body,
+.comparison-showcase {
+  padding-top: 2.4rem;
+  padding-bottom: 2.6rem;
+}
+
+.comparison-showcase .comparison-description {
+  max-width: 740px;
+  margin: 0 auto 1.5rem auto;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.comparison-showcase .comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+  align-items: start;
+}
+
+.comparison-showcase .comparison-card {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-md);
+  min-height: 420px;
+}
+
+.comparison-showcase .comparison-card img,
+.comparison-showcase .comparison-card video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.comparison-showcase .comparison-card img {
+  height: auto;
+  object-fit: cover;
+}
+
+.comparison-showcase .comparison-card video {
+  margin-top: 0.75rem;
+  height: auto;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.comparison-showcase .mappingrun-card .mappingrun-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 1fr) minmax(240px, 1fr);
+  gap: 1rem;
+}
+
+.comparison-showcase .mappingrun-card .mappingrun-main video,
+.comparison-showcase .mappingrun-card .mappingrun-side img,
+.comparison-showcase .mappingrun-card .mappingrun-side video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.comparison-showcase .mappingrun-card .mappingrun-main video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.comparison-showcase .mappingrun-card .mappingrun-side img,
+.comparison-showcase .mappingrun-card .mappingrun-side video {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+
+
+.comparison-showcase .comparison-card img {
+  height: auto;
+  object-fit: contain;
+}
+
+.real-world-deployment-section .hero-body,
+.real-world-deployment-section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.6rem;
+}
+
+.real-world-deployment-section .deployment-grid,
+.cross-embodiment-section .deployment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.real-world-deployment-section .deployment-card,
+.cross-embodiment-section .deployment-card {
+  flex: 1 1 30%;
+  min-width: 320px;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 0.45rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.real-world-deployment-section .deployment-card:hover,
+.cross-embodiment-section .deployment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.real-world-deployment-section .deployment-card img,
+.real-world-deployment-section .deployment-card video,
+.cross-embodiment-section .deployment-card img,
+.cross-embodiment-section .deployment-card video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  background: #0f172a;
+}
+
+.real-world-deployment-section .deployment-card img,
+.cross-embodiment-section .deployment-card img {
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.real-world-deployment-section .deployment-card video,
+.cross-embodiment-section .deployment-card video {
+  margin-top: 0.5rem;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .real-world-deployment-section .deployment-grid,
+  .cross-embodiment-section .deployment-grid {
+    justify-content: flex-start;
+  }
+}
+
 .hall-environment-grid img:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);

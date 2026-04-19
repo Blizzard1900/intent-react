@@ -306,34 +306,104 @@
 </section>
 <!-- End Pipeline Overview -->
 
-<!-- Cross-Embodiment Deployment -->
-<section class="section hero is-light cross-embodiment-section">
+<section class="section hero is-light comparison-showcase">
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
       <div class="column is-full-width has-text-centered">
-        <h2 class="title is-3">Cross-Embodiment Deployment</h2>
-        <div class="deployment-grid">
-          <article class="deployment-card">
-            <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 1" loading="lazy">
+        <h2 class="title is-3">More Comparison Results</h2>
+        <p class="comparison-description">
+          ObjectReact initially turns toward the correct direction, but lacks consistent guidance near the goal and ultimately drifts away. IntentReact successfully reaches the goal without drifting.
+        </p>
+        <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(3, minmax(360px, 1fr)); gap: 1.5rem; margin-top: 1rem; align-items: start;">
+          <article class="comparison-card">
+            <img src="img/More Comparison Results/img5.png" alt="Comparison result 1" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results/img5.png" src="img/More Comparison Results/video5-h264.mp4"></video>
           </article>
-
-          <article class="deployment-card">
-            <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 2" loading="lazy">
+          <article class="comparison-card">
+            <img src="img/More Comparison Results/img6.png" alt="Comparison result 2" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results/img6.png" src="img/More Comparison Results/video6-h264.mp4"></video>
           </article>
-
-          <article class="deployment-card">
-            <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 3" loading="lazy">
-          </article>
-
-          <article class="deployment-card">
-            <img src="img/cross_embodiment_placeholder.svg" alt="Deployment image placeholder 4" loading="lazy">
+          <article class="comparison-card">
+            <img src="img/More Comparison Results/img7.png" alt="Comparison result 3" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results/img7.png" src="img/More Comparison Results/video7-h264.mp4"></video>
           </article>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Cross-Embodiment Deployment -->
+
+<!-- End More Comparison Results -->
+
+<!-- More Comparison Results 2 -->
+<section class="section hero is-light comparison-showcase">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <p class="comparison-description">
+          IntentReact matches ObjectReact when no ambiguity exists, indicating that intent acts as a soft bias that intervenes only under directional ambiguity without disrupting the underlying reactive control.
+        </p>
+        <div class="comparison-grid" style="display: grid; grid-template-columns: repeat(3, minmax(360px, 1fr)); gap: 1.5rem; margin-top: 1rem; align-items: start;">
+          <article class="comparison-card">
+            <img src="img/More Comparison Results2/9.png" alt="Comparison result 9" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results2/9.png" src="img/More Comparison Results2/9-h264.mp4"></video>
+          </article>
+          <article class="comparison-card">
+            <img src="img/More Comparison Results2/10.png" alt="Comparison result 10" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results2/10.png" src="img/More Comparison Results2/10-h264.mp4"></video>
+          </article>
+          <article class="comparison-card">
+            <img src="img/More Comparison Results2/11.png" alt="Comparison result 11" loading="lazy" />
+            <video controls muted loop preload="metadata" playsinline poster="img/More Comparison Results2/11.png" src="img/More Comparison Results2/11-h264.mp4"></video>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Real-world Deployment -->
+<section class="section hero is-light real-world-deployment-section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Real-world Deployment</h2>
+        <div class="deployment-grid" style="display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 1rem; align-items: stretch; margin-top: 1.5rem;">
+          
+          <article class="deployment-card mappingrun-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Mapping run</p>
+            <video controls muted loop preload="metadata" playsinline src="panorama_of_hall.mp4" onloadedmetadata="this.playbackRate=0.75;" style="width: 100%; border-radius: 10px; object-fit: cover; flex-grow: 1;"></video>
+          </article>
+          
+          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Shortcut</p>
+            <img src="img/to_power_bank_kiosk_1/goal.png" alt="Shortcut goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1/vis/to_power_bank_kiosk_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+          </article>
+
+          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">New obstacles</p>
+            <img src="img/to_power_bank_kiosk_1_with_block/0059.png" alt="New obstacles goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1_with_block/vis/to_power_bank_kiosk_1_with_block-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+          </article>
+
+          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Opposite</p>
+            <img src="img/to_power_bank_kiosk_behand_1/0035.png" alt="Opposite goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_behand_1/vis/to_power_bank_kiosk_behand_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+          </article>
+
+          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Reverse</p>
+            <img src="img/to_door_beband_1/goal.png" alt="Reverse goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+            <video controls muted loop preload="metadata" playsinline src="img/to_door_beband_1/vis/to_door_beband_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Hall Environment Section -->
 <section class="section hero is-light">
@@ -346,115 +416,54 @@
           <img src="img/Hall_environment/3.png" alt="Hall environment 3" loading="lazy">
           <img src="img/Hall_environment/4.png" alt="Hall environment 4" loading="lazy">
         </div>
-        <p class="hall-environment-caption">Hall_environment</p>
+        <p class="hall-environment-caption" style="margin-bottom: 1.5rem;">Hall_environment</p>
+
+        <!-- BEV Video -->
+        <div class="bev-video-container" style="max-width: 800px; margin: 0 auto;">
+          <video controls muted loop playsinline preload="metadata" src="video/bev_video-h264.mp4" style="width: 100%; border-radius: 12px; box-shadow: var(--shadow-md);"></video>
+          <p class="hall-environment-caption" style="margin-top: 0.5rem;">Third-person perspective</p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!-- End Hall Environment Section -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+<!-- Summary Section -->
+<section class="section hero is-light summary-section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3" style="margin-bottom: 2rem;">Summary</h2>
+        <div class="summary-grid" style="display: flex; flex-direction: row; justify-content: center; gap: 1.5rem; align-items: stretch;">
           
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <!-- RoboHop Column -->
+          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(250, 235, 215, 0.5); border: 2px dashed rgba(200, 150, 150, 0.5); border-radius: 16px; padding: 1.5rem;">
+            <h3 class="title is-4" style="margin-bottom: 1rem;">RoboHop</h3>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/robohop-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/robohop2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
           </div>
+
+          <!-- ObjectReact Column -->
+          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(250, 235, 215, 0.5); border: 2px dashed rgba(200, 150, 150, 0.5); border-radius: 16px; padding: 1.5rem;">
+            <h3 class="title is-4" style="margin-bottom: 1rem;">ObjectReact</h3>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/ObjectReact-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/ObjectReact2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
+          </div>
+
+          <!-- IntentReact (Ours) Column -->
+          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(210, 235, 255, 0.5); border: 2px dashed rgba(150, 180, 220, 0.5); border-radius: 16px; padding: 1.5rem;">
+            <h3 class="title is-4" style="margin-bottom: 1rem;">IntentReact (ours)</h3>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/IntentReact (ours)-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
+            <video autoplay muted loop playsinline preload="metadata" src="img/summary/IntentReact (ours)2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
+<!-- End Summary Section -->
 
   </main>
 
