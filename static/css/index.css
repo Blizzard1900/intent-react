@@ -739,8 +739,7 @@ body.modal-open {
 
 .real-world-deployment-section .deployment-card,
 .cross-embodiment-section .deployment-card {
-  flex: 1 1 30%;
-  min-width: 320px;
+  width: 100%;
   background: var(--background-primary);
   border: 1px solid var(--border-color);
   border-radius: 14px;

@@ -261,34 +261,13 @@
   </div>
 </section>
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified" style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">
-          <p>
-            Object-goal visual navigation requires robots to reason over semantic structure and act effectively under partial observability. Recent approaches based on object-level topological maps enable long-horizon navigation without dense geometric reconstruction, but their execution remains limited by the gap between <strong>global topological guidance and local perception-driven control</strong>. In particular, local decisions are made solely from the current egocentric observation, without access to information beyond the robot's field of view. As a result, the robot may persist along its current heading even when initially oriented away from the goal, moving toward directions that do not decrease the global topological distance.
-          </p>
-          <p>
-            In this work, we propose <strong><span style="color: var(--primary-color);">IntentReact</span></strong>, an <strong>intent-conditioned object-centric navigation framework</strong> that introduces a compact interface between global topological planning and reactive object-centric control. Our approach encodes global topological guidance as a low-dimensional directional signal, termed <strong><em>intent</em></strong>, which conditions a learned waypoint prediction policy to bias navigation toward topologically consistent progression.
-          </p>
-          <p>
-            This design enables the robot to promptly reorient when local observations are misleading, guiding motion toward directions that decrease global topological distance while preserving the reactivity and robustness of object-centric control. We evaluate the proposed framework through extensive experiments, demonstrating improved navigation success and execution quality compared to prior object-centric navigation methods.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+
 
 <!-- Pipeline Overview -->
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
+      <div class="column is-full has-text-centered">
         <h2 class="title is-3">IntentReact Pipeline</h2>
         <img src="img/IntentReact Navigation pipeline.png" alt="IntentReact Navigation Pipeline" class="center-image" style="width:100%; border-radius: 12px;" />
         <div class="content has-text-justified" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;"> 
@@ -309,7 +288,7 @@
 <section class="section hero is-light comparison-showcase">
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
+      <div class="column is-full has-text-centered">
         <h2 class="title is-3">More Comparison Results</h2>
         <p class="comparison-description">
           ObjectReact initially turns toward the correct direction, but lacks consistent guidance near the goal and ultimately drifts away. IntentReact successfully reaches the goal without drifting.
@@ -339,7 +318,7 @@
 <section class="section hero is-light comparison-showcase">
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
+      <div class="column is-full has-text-centered">
         <p class="comparison-description">
           IntentReact matches ObjectReact when no ambiguity exists, indicating that intent acts as a soft bias that intervenes only under directional ambiguity without disrupting the underlying reactive control.
         </p>
@@ -364,48 +343,45 @@
 
 <!-- Real-world Deployment -->
 <section class="section hero is-light real-world-deployment-section">
-  <div class="container is-max-widescreen">
+    <div class="container is-max-widescreen" style="max-width: 1550px;">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
+      <div class="column is-full has-text-centered">
         <h2 class="title is-3">Real-world Deployment</h2>
-        <div class="deployment-grid" style="display: grid; grid-template-columns: 1.5fr repeat(4, 1fr); gap: 1rem; align-items: stretch; margin-top: 1.5rem;">
-          
-          <article class="deployment-card mappingrun-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
-            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Mapping run</p>
+          <div class="deployment-container" style="display: flex; flex-direction: row; gap: 2.5rem; justify-content: center; align-items: stretch; margin-top: 1.5rem; width: 100%; max-width: 1400px; margin-left: auto; margin-right: auto; text-align: left;">
+            <div class="left-col" style="flex: 0 0 540px; display: flex; flex-direction: column; justify-content: center;">
+              <article class="deployment-card mappingrun-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.25rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.75rem; font-size: 1.25rem; color: var(--text-primary);">Mapping run</p>
             <video controls muted loop preload="metadata" playsinline src="panorama_of_hall.mp4" onloadedmetadata="this.playbackRate=0.75;" style="width: 100%; border-radius: 10px; object-fit: cover; flex-grow: 1;"></video>
           </article>
-          
-          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+            </div>
+            <div class="right-col" style="flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+              <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
             <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Shortcut</p>
             <img src="img/to_power_bank_kiosk_1/goal.png" alt="Shortcut goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
-            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1/vis/to_power_bank_kiosk_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
-          </article>
-
-          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
-            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">New obstacles</p>
-            <img src="img/to_power_bank_kiosk_1_with_block/0059.png" alt="New obstacles goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
-            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1_with_block/vis/to_power_bank_kiosk_1_with_block-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
-          </article>
-
-          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
-            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Opposite</p>
-            <img src="img/to_power_bank_kiosk_behand_1/0035.png" alt="Opposite goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
-            <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_behand_1/vis/to_power_bank_kiosk_behand_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
-          </article>
-
-          <article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
-            <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Reverse</p>
-            <img src="img/to_door_beband_1/goal.png" alt="Reverse goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
-            <video controls muted loop preload="metadata" playsinline src="img/to_door_beband_1/vis/to_door_beband_1-h264.mp4" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
-          </article>
-
+              <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1/vis/kiosk1.mov" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+            </article>
+<article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+              <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">New obstacles</p>
+              <img src="img/to_power_bank_kiosk_1_with_block/0059.png" alt="New obstacles goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+              <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_1_with_block/vis/kiosk2.mov" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+            </article>
+<article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+              <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Opposite</p>
+              <img src="img/to_power_bank_kiosk_behand_1/0035.png" alt="Opposite goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+              <video controls muted loop preload="metadata" playsinline src="img/to_power_bank_kiosk_behand_1/vis/kiosk3.mov" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>
+            </article>
+<article class="deployment-card" style="background: var(--background-primary); border: 1px solid var(--border-color); border-radius: 14px; padding: 0.75rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column;">
+              <p class="deployment-label" style="font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--text-primary);">Reverse</p>
+              <img src="img/to_door_beband_1/goal.png" alt="Reverse goal" loading="lazy" style="width: 100%; border-radius: 8px; object-fit: cover; margin-bottom: 0.5rem; background: #fff;" />
+              <video controls muted loop preload="metadata" playsinline src="img/to_door_beband_1/vis/kiosk4.mov" style="width: 100%; border-radius: 8px; object-fit: cover; flex-grow: 1;"></video>            </article>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Hall Environment Section -->
+  <!-- Hall Environment Section -->
 <section class="section hero is-light">
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
@@ -433,26 +409,25 @@
 <section class="section hero is-light summary-section">
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
-      <div class="column is-full-width has-text-centered">
-        <h2 class="title is-3" style="margin-bottom: 2rem;">Summary</h2>
+      <div class="column is-full has-text-centered">
         <div class="summary-grid" style="display: flex; flex-direction: row; justify-content: center; gap: 1.5rem; align-items: stretch;">
           
           <!-- RoboHop Column -->
-          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(250, 235, 215, 0.5); border: 2px dashed rgba(200, 150, 150, 0.5); border-radius: 16px; padding: 1.5rem;">
+          <div class="summary-card" style="flex: 1; min-width: 250px; border-radius: 16px; padding: 1.5rem;">
             <h3 class="title is-4" style="margin-bottom: 1rem;">RoboHop</h3>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/robohop-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/robohop2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
           </div>
 
           <!-- ObjectReact Column -->
-          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(250, 235, 215, 0.5); border: 2px dashed rgba(200, 150, 150, 0.5); border-radius: 16px; padding: 1.5rem;">
+          <div class="summary-card" style="flex: 1; min-width: 250px; border-radius: 16px; padding: 1.5rem;">
             <h3 class="title is-4" style="margin-bottom: 1rem;">ObjectReact</h3>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/ObjectReact-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/ObjectReact2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
           </div>
 
           <!-- IntentReact (Ours) Column -->
-          <div class="summary-card" style="flex: 1; min-width: 250px; background: rgba(210, 235, 255, 0.5); border: 2px dashed rgba(150, 180, 220, 0.5); border-radius: 16px; padding: 1.5rem;">
+          <div class="summary-card" style="flex: 1; min-width: 250px; border-radius: 16px; padding: 1.5rem;">
             <h3 class="title is-4" style="margin-bottom: 1rem;">IntentReact (ours)</h3>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/IntentReact (ours)-h264.mp4" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 1rem;"></video>
             <video autoplay muted loop playsinline preload="metadata" src="img/summary/IntentReact (ours)2-h264.mp4" style="width: 100%; display: block; border-radius: 8px;"></video>
