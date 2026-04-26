@@ -931,6 +931,42 @@ body.modal-open {
   margin-top: 0;
 }
 
+.additional-videos-section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.8rem;
+}
+
+.additional-videos-section .additional-video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  align-items: center;
+}
+
+.additional-videos-section .additional-video-item {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.additional-videos-section .additional-video-item video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  background: #0f172a;
+  box-shadow: var(--shadow-lg);
+}
+
+.additional-videos-section .additional-video-caption {
+  max-width: 860px;
+  margin: 0.75rem auto 0;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   .comparison-showcase .comparison-grid {
     grid-template-columns: 1fr;
