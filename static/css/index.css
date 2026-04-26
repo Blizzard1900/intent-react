@@ -347,7 +347,7 @@ body.modal-open {
 
 .overview-highlights {
   display: block;
-  max-width: 760px;
+  max-width: none;
   margin: 0 auto;
   text-align: left;
 }
@@ -400,6 +400,12 @@ body.modal-open {
     color: var(--text-primary) !important;
     margin-bottom: 2rem !important;
     line-height: 1.1 !important;
+    font-size: clamp(2.1rem, 3.4vw, 2.9rem) !important;
+}
+
+.publication-title-line {
+  display: block;
+  white-space: nowrap;
 }
 
 .publication-banner {
@@ -625,8 +631,8 @@ body.modal-open {
 .hall-environment-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.7rem;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .hall-environment-grid img {
@@ -646,11 +652,12 @@ body.modal-open {
 }
 
 .comparison-showcase .comparison-description {
-  max-width: 740px;
-  margin: 0 auto 1.5rem auto;
+  max-width: none;
+  margin: 1.35rem auto 0 auto;
   color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.8;
+  text-align: left;
 }
 
 .comparison-showcase .comparison-grid {
@@ -667,7 +674,6 @@ body.modal-open {
   border-radius: 16px;
   padding: 0.75rem;
   box-shadow: var(--shadow-md);
-  min-height: 420px;
 }
 
 .comparison-showcase .comparison-card img,
@@ -727,6 +733,99 @@ body.modal-open {
   padding-bottom: 2.6rem;
 }
 
+.real-world-deployment-section .container {
+  max-width: 1500px;
+}
+
+.real-world-deployment-section .deployment-scroll {
+  width: 100%;
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  padding: 0 0.25rem 0.85rem;
+}
+
+.real-world-deployment-section .deployment-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+
+.real-world-deployment-section .deployment-scroll::-webkit-scrollbar-track {
+  background: var(--background-accent);
+  border-radius: 999px;
+}
+
+.real-world-deployment-section .deployment-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.real-world-deployment-section .deployment-layout {
+  display: grid;
+  grid-template-columns: minmax(520px, 0.72fr) minmax(1275px, 1.28fr);
+  gap: 1.35rem;
+  min-width: 1830px;
+  max-width: 2100px;
+  margin: 0 auto;
+  align-items: start;
+  text-align: left;
+}
+
+.real-world-deployment-section .deployment-tasks {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+.real-world-deployment-section .deployment-task-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.real-world-deployment-section .deployment-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 0.75rem;
+  box-shadow: var(--shadow-md);
+}
+
+.real-world-deployment-section .mappingrun-card {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.real-world-deployment-section .deployment-card-wide .deployment-media-pair {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.real-world-deployment-section .deployment-label {
+  margin: 0.65rem 0 0;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.real-world-deployment-section .deployment-goal-label {
+  margin: 0.35rem 0 0.15rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.real-world-deployment-section .deployment-goal-media {
+  display: flex;
+  flex-direction: column;
+}
+
 .real-world-deployment-section .deployment-grid,
 .cross-embodiment-section .deployment-grid {
   display: flex;
@@ -771,11 +870,76 @@ body.modal-open {
   object-fit: cover;
 }
 
+.real-world-deployment-section .deployment-card img {
+  background: #fff;
+  object-fit: contain;
+}
+
 .real-world-deployment-section .deployment-card video,
 .cross-embodiment-section .deployment-card video {
   margin-top: 0.5rem;
   height: auto;
   object-fit: cover;
+}
+
+.real-world-deployment-section .deployment-card {
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+
+.real-world-deployment-section .mappingrun-card video {
+  margin-top: 0;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.hall-environment-section {
+  padding-top: 2.4rem;
+  padding-bottom: 2.6rem;
+}
+
+.hall-environment-section .bev-video-container {
+  max-width: 100%;
+  margin: 1.5rem auto 0;
+}
+
+.hall-environment-section .bev-video-container video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.hall-environment-section .bev-video-container .hall-environment-caption {
+  margin-top: 0.55rem;
+}
+
+.real-world-deployment-section .deployment-card-wide video,
+.real-world-deployment-section .deployment-card-wide img {
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.real-world-deployment-section .deployment-card-wide video {
+  object-fit: cover;
+}
+
+.real-world-deployment-section .deployment-card-wide img {
+  object-fit: contain;
+}
+
+.real-world-deployment-section .deployment-card-wide video {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .comparison-showcase .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-showcase .comparison-description {
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 1200px) {
