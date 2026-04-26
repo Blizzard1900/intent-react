@@ -760,25 +760,24 @@ body.modal-open {
 
 .real-world-deployment-section .deployment-layout {
   display: grid;
-  grid-template-columns: minmax(520px, 0.72fr) minmax(1275px, 1.28fr);
-  gap: 1.35rem;
-  min-width: 1830px;
-  max-width: 2100px;
+  grid-template-columns: 320px minmax(1280px, 1fr);
+  gap: 1.25rem;
+  min-width: 1630px;
+  max-width: 1780px;
   margin: 0 auto;
-  align-items: start;
+  align-items: center;
   text-align: left;
 }
 
 .real-world-deployment-section .deployment-tasks {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 1rem;
+  width: 100%;
 }
 
 .real-world-deployment-section .deployment-task-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
+  align-items: end;
 }
 
 .real-world-deployment-section .deployment-card {
@@ -795,7 +794,7 @@ body.modal-open {
   align-self: center;
   justify-self: center;
   width: 100%;
-  max-width: 560px;
+  max-width: 300px;
 }
 
 .real-world-deployment-section .deployment-card-wide .deployment-media-pair {
