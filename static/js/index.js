@@ -142,6 +142,80 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupAdditionalTaskCarousels() {
+    const carousels = document.querySelectorAll('[data-carousel]');
+
+    carousels.forEach(carousel => {
+        const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
+        const prevButtons = Array.from(carousel.querySelectorAll('[data-carousel-prev]'));
+        const nextButtons = Array.from(carousel.querySelectorAll('[data-carousel-next]'));
+        const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+        const caption = carousel.querySelector('[data-carousel-caption]');
+        const description = carousel.querySelector('[data-carousel-description]');
+        let currentIndex = slides.findIndex(slide => slide.classList.contains('is-active'));
+
+        if (slides.length === 0) return;
+        if (currentIndex < 0) currentIndex = 0;
+
+        function showSlide(nextIndex) {
+            const normalizedIndex = (nextIndex + slides.length) % slides.length;
+
+            slides.forEach((slide, index) => {
+                const isActive = index === normalizedIndex;
+                slide.classList.toggle('is-active', isActive);
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+
+                if (!isActive) {
+                    const video = slide.querySelector('video');
+                    if (video) video.pause();
+                }
+            });
+
+            dots.forEach((dot, index) => {
+                const isActive = index === normalizedIndex;
+                dot.classList.toggle('is-active', isActive);
+                if (isActive) {
+                    dot.setAttribute('aria-current', 'true');
+                } else {
+                    dot.removeAttribute('aria-current');
+                }
+            });
+
+            const activeSlide = slides[normalizedIndex];
+            if (caption) {
+                const slideTitle = activeSlide.querySelector('.additional-task-slide-title');
+                caption.textContent = slideTitle ? slideTitle.textContent : activeSlide.dataset.carouselTitle || '';
+            }
+
+            if (description) {
+                const slideDescription = activeSlide.querySelector('.additional-task-slide-description');
+                const descriptionText = slideDescription ? slideDescription.textContent : '';
+                description.textContent = descriptionText;
+                description.hidden = descriptionText.length === 0;
+            }
+
+            currentIndex = normalizedIndex;
+        }
+
+        prevButtons.forEach(button => {
+            button.addEventListener('click', () => showSlide(currentIndex - 1));
+        });
+
+        nextButtons.forEach(button => {
+            button.addEventListener('click', () => showSlide(currentIndex + 1));
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const nextIndex = Number(dot.dataset.carouselIndex);
+                if (!Number.isNaN(nextIndex)) showSlide(nextIndex);
+            });
+        });
+
+        showSlide(currentIndex);
+    });
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -161,5 +235,6 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+    setupAdditionalTaskCarousels();
 
 })

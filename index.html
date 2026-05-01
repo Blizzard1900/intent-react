@@ -372,6 +372,7 @@
   <div class="container is-max-widescreen">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
+        <p class="deployment-scroll-hint">Scroll horizontally to view the full deployment sequence.</p>
         <div class="deployment-scroll" aria-label="Scrollable real-world deployment examples">
           <div class="deployment-layout">
             <article class="deployment-card mappingrun-card">
@@ -447,19 +448,50 @@
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
         <h3 class="real-world-subsection-title">Additional Tasks</h3>
-        <div class="additional-video-list">
-          <article class="additional-video-item">
-            <video controls muted loop preload="metadata" playsinline src="video/autoMat_ob.mp4"></video>
-            <p class="additional-video-caption">AutoMat</p>
-          </article>
-          <article class="additional-video-item">
-            <video controls muted loop preload="metadata" playsinline src="video/toChargeBank(1)_ob.mp4"></video>
-            <p class="additional-video-caption">To Charge Bank</p>
-          </article>
-          <article class="additional-video-item">
-            <video controls muted loop preload="metadata" playsinline src="video/toSignBroad(1)_ob.mp4"></video>
-            <p class="additional-video-caption">To Sign Broad</p>
-          </article>
+        <div class="additional-task-carousel" data-carousel>
+          <div class="additional-task-carousel-stage">
+            <button class="additional-task-carousel-btn additional-task-carousel-btn-prev" type="button" data-carousel-prev aria-label="Previous additional task">&#8249;</button>
+            <div class="additional-task-carousel-viewport">
+              <article class="additional-video-item additional-task-slide is-active" data-carousel-slide data-carousel-title="AutoMat">
+                <video controls muted loop preload="auto" playsinline src="video/autoMat_ob.mp4"></video>
+                <div class="additional-task-slide-meta" hidden>
+                  <p class="additional-task-slide-title">AutoMat</p>
+                </div>
+              </article>
+              <article class="additional-video-item additional-task-slide" data-carousel-slide data-carousel-title="To Charge Bank">
+                <video controls muted loop preload="auto" playsinline src="video/toChargeBank(1)_ob.mp4"></video>
+                <div class="additional-task-slide-meta" hidden>
+                  <p class="additional-task-slide-title">To Charge Bank</p>
+                </div>
+              </article>
+              <article class="additional-video-item additional-task-slide" data-carousel-slide data-carousel-title="To Sign Broad">
+                <video controls muted loop preload="auto" playsinline src="video/toSignBroad(1)_ob.mp4"></video>
+                <div class="additional-task-slide-meta" hidden>
+                  <p class="additional-task-slide-title">To Sign Broad</p>
+                </div>
+              </article>
+              <article class="additional-video-item additional-task-slide" data-carousel-slide data-carousel-title="Failure Case: Similar Corridors">
+                <video controls muted loop preload="auto" playsinline>
+                  <source src="video/fail_always_turn.mp4" type="video/mp4">
+                </video>
+                <div class="additional-task-slide-meta" hidden>
+                  <p class="additional-task-slide-title">Failure Case: Similar Corridors</p>
+                  <p class="additional-task-slide-description">In this scenario, two visually similar corridors lead to place-recognition failure, resulting in erroneous control commands.</p>
+                </div>
+              </article>
+            </div>
+            <button class="additional-task-carousel-btn additional-task-carousel-btn-next" type="button" data-carousel-next aria-label="Next additional task">&#8250;</button>
+          </div>
+          <div class="additional-task-copy">
+            <p class="additional-video-caption" data-carousel-caption>AutoMat</p>
+            <p class="additional-video-description" data-carousel-description hidden></p>
+          </div>
+          <div class="additional-task-carousel-dots" aria-label="Additional task selector">
+            <button class="additional-task-carousel-dot is-active" type="button" data-carousel-dot data-carousel-index="0" aria-label="Show AutoMat" aria-current="true"></button>
+            <button class="additional-task-carousel-dot" type="button" data-carousel-dot data-carousel-index="1" aria-label="Show To Charge Bank"></button>
+            <button class="additional-task-carousel-dot" type="button" data-carousel-dot data-carousel-index="2" aria-label="Show To Sign Broad"></button>
+            <button class="additional-task-carousel-dot" type="button" data-carousel-dot data-carousel-index="3" aria-label="Show Failure Case: Similar Corridors"></button>
+          </div>
         </div>
       </div>
     </div>
